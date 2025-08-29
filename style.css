@@ -3,7 +3,6 @@ textarea {
     height: 25vh;
     resize: vertical;
     border: 2px solid rgb(169, 159, 159);
-    background-color: rgb(243, 246, 248);
 
 }
 
@@ -11,6 +10,9 @@ textarea {
     border: 1px solid black;
 } */
 
+p {
+    margin: 0px;
+}
 
 .text {
 
@@ -18,9 +20,14 @@ textarea {
     /* 保持元素顶部对齐 */
 }
 
+.menuBar,
 .content {
     display: inline-block;
     vertical-align: top;
+}
+
+.menuBar {
+    margin-left: 10px;
 }
 
 .container {
@@ -31,4 +38,24 @@ textarea {
 .autoFit {
     width: fit-content;
     height: fit-content;
+}
+
+ul {
+    list-style-type: none;
+    padding: 5px;
+    border: 2px solid rgb(169, 159, 159);
+}
+
+ul li * {
+    margin: 5px auto;
+    width: 15vw;
+    height: 5vh;
+    text-align: center;
+    display: justify;
+}
+
+.settings,
+.operate {
+    margin: 10px auto;
+    /* border: 2px solid rgb(169, 159, 159); */
 }

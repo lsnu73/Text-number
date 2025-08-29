@@ -12,7 +12,7 @@
 
     <body>
         <div class="container autoFit">
-            <div class="content autoFit">
+            <div class="content ">
                 <div class="text">
                     <p class="autoFit">输入文本</p>
                     <textarea id="inputText"></textarea>
@@ -22,10 +22,33 @@
                     <textarea id="outPutText"></textarea>
                 </div>
             </div>
-            <div class="content">
-                <button id="btn">开始处理</button>
-                <button id="btn">复制结果</button>
-                <button id="btn">清空</button>
+            <div class="menuBar">
+                <div class="settings">
+                    <p>设置</p>
+                    <ul>
+                        <li id="optionSelectInput">
+                            <select id="optionSelect">
+                                <option value="symbol">指定符号后</option>
+                                <option value="position">指定位置后</option>
+                            </select>
+                        </li>
+                        <li id="symbolInput" style="display: show;">
+                            <input type="text" name="symbol" placeholder="请输入符号">
+                        </li>
+                        <li id="positionInput" style="display: none;">
+                            <input type="number" name="index" placeholder="请输入位置">
+                        </li>
+                    </ul>
+                </div>
+                <div class="operate">
+                    <p>操作按钮</p>
+                    <ul>
+                        <li><button id="btn_start">开始处理1</button></li>
+                        <li><button id="btn_copy">复制结果1</button></li>
+                        <li><button id="btn_clear">清空1</button></li>
+                    </ul>
+
+                </div>
 
             </div>
         </div>
