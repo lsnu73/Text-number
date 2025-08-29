@@ -100,3 +100,53 @@ button:nth-child(3) {
 button:nth-child(4) {
     background-color: #2e75cc;
 }
+
+/* 响应式设计 - 移动设备适配 */
+@media (max-width: 768px) {
+    body {
+        padding: 10px 20px;
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+    
+    .content-area {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .settings-area {
+        width: 100%;
+        order: 2; /* 将设置区域移到下方 */
+    }
+    
+    .input-area,
+    .output-area {
+        margin-bottom: 15px;
+    }
+    
+    textarea {
+        min-height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .settings,
+    .operation-buttons {
+        padding: 12px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}
