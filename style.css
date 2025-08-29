@@ -1,61 +1,92 @@
-textarea {
-    width: 60vw;
-    height: 25vh;
-    resize: vertical;
-    border: 2px solid rgb(169, 159, 159);
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* div {
-    border: 1px solid black;
-} */
-
-p {
-    margin: 0px;
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
-.text {
-
-    vertical-align: top;
-    /* 保持元素顶部对齐 */
-}
-
-.menuBar,
-.content {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.menuBar {
-    margin-left: 10px;
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2e75cc;
 }
 
 .container {
-
-    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
 }
 
-.autoFit {
-    width: fit-content;
-    height: fit-content;
+.content-area {
+    flex: 1;
+    margin-right: 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 5px;
-    border: 2px solid rgb(169, 159, 159);
+.input-area,
+.output-area {
+    margin-bottom: 20px;
 }
 
-ul li * {
-    margin: 5px auto;
-    width: 15vw;
-    height: 5vh;
-    text-align: center;
-    display: justify;
+.input-area h2,
+.output-area h2,
+.settings h2,
+.operation-buttons h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.settings-area {
+    width: 300px;
 }
 
 .settings,
-.operate {
-    margin: 10px auto;
-    /* border: 2px solid rgb(169, 159, 159); */
+.operation-buttons {
+    background-color: #f7fafc;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+
+button:nth-child(2) {
+    background-color: #38a169;
+}
+
+button:nth-child(3) {
+    background-color: #ed8936;
+}
+
+button:nth-child(4) {
+    background-color: #2e75cc;
 }

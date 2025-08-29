@@ -1,58 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>文本增加序号</title>
-        <script src="./libs/jquery-3.7.1.min.js"></script>
-        <script src="./number.js"></script>
-        <link rel="stylesheet" href="./style.css">
+        <title>文本序号生成工具</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="libs/jquery-3.7.1.min.js"></script>
+        <script src="number.js"></script>
     </head>
 
     <body>
-        <div class="container autoFit">
-            <div class="content ">
-                <div class="text">
-                    <p class="autoFit">输入文本</p>
-                    <textarea id="inputText"></textarea>
+        <h1>文本序号生成工具</h1>
+        <div class="container">
+            <div class="content-area">
+                <div class="input-area">
+                    <h2>输入文本</h2>
+                    <textarea id="inputText" placeholder="请在此输入需要处理的文本，每行一条..."></textarea>
                 </div>
-                <div class="text">
-                    <p class="autoFit">输出结果</p>
-                    <textarea id="outPutText"></textarea>
+                <div class="output-area">
+                    <h2>输出结果</h2>
+                    <textarea id="outPutText" placeholder="处理后的结果将显示在这里..." readonly></textarea>
                 </div>
             </div>
-            <div class="menuBar">
+            <div class="settings-area">
                 <div class="settings">
-                    <p>设置</p>
-                    <ul>
-                        <li id="optionSelectInput">
-                            <select id="optionSelect">
-                                <option value="symbol">指定符号后</option>
-                                <option value="position">指定位置后</option>
-                            </select>
-                        </li>
-                        <li id="symbolInput" style="display: show;">
-                            <input type="text" name="symbol" placeholder="请输入符号">
-                        </li>
-                        <li id="positionInput" style="display: none;">
-                            <input type="number" name="index" placeholder="请输入位置">
-                        </li>
-                    </ul>
+                    <h2>设置</h2>
+                    <select id="optionSelect">
+                        <option value="symbol">指定符号后</option>
+                        <option value="position">指定位置后</option>
+                    </select>
+                    <input type="text" id="symbol" placeholder="请输入符号" style="display:show;">
+                    <input type="text" id="position" placeholder="请输入位置" style="display:none;" value="0">
                 </div>
-                <div class="operate">
-                    <p>操作按钮</p>
-                    <ul>
-                        <li><button id="btn_start">开始处理1</button></li>
-                        <li><button id="btn_copy">复制结果1</button></li>
-                        <li><button id="btn_clear">清空1</button></li>
-                    </ul>
-
+                <div class="operation-buttons">
+                    <h2>操作按钮</h2>
+                    <button id="btn_start">开始处理</button>
+                    <button id="btn_copy">复制结果</button>
+                    <button id="btn_clear">清空内容</button>
                 </div>
-
             </div>
         </div>
-
     </body>
 
 </html>
