@@ -4,10 +4,31 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>文本增加序号</title>
+        <script src="./libs/jquery-3.7.1.min.js"></script>
+        <script src="./number.js"></script>
+        <link rel="stylesheet" href="./style.css">
     </head>
 
     <body>
+        <div class="container autoFit">
+            <div class="content autoFit">
+                <div class="text">
+                    <p class="autoFit">输入文本</p>
+                    <textarea id="inputText"></textarea>
+                </div>
+                <div class="text">
+                    <p class="autoFit">输出结果</p>
+                    <textarea id="outPutText"></textarea>
+                </div>
+            </div>
+            <div class="content">
+                <button id="btn">开始处理</button>
+                <button id="btn">复制结果</button>
+                <button id="btn">清空</button>
+
+            </div>
+        </div>
 
     </body>
 

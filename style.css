@@ -1,0 +1,34 @@
+textarea {
+    width: 60vw;
+    height: 25vh;
+    resize: vertical;
+    border: 2px solid rgb(169, 159, 159);
+    background-color: rgb(243, 246, 248);
+
+}
+
+/* div {
+    border: 1px solid black;
+} */
+
+
+.text {
+
+    vertical-align: top;
+    /* 保持元素顶部对齐 */
+}
+
+.content {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.container {
+
+    margin: 100px auto;
+}
+
+.autoFit {
+    width: fit-content;
+    height: fit-content;
+}
