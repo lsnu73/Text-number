@@ -1,15 +1,26 @@
 $(document).ready(function () {
     // 开始对文本进行编号
     function startNumber() {
+        if ($("#optionSelect").val() == "symbol") {
+            numberAfterSymbol($("#symbolInput input").val());
+        }
+
+
+
+    }
+    function numberAfterSymbol(symbol) {
+        console.log(symbol)
         let inputText = $("#inputText").val();
         let textList = inputText.split("\n");
         let serialNumber = 1;
         let outputText = "";
-
         textList.forEach(element => {
-            outputText += serialNumber++ + ". " + element + "\n";
+            if (element.includes(symbol)) {
+                outputText += element.replace(symbol, symbol + serialNumber++ + ". ") + "\n";
+            } else {
+                outputText += element + "\n";
+            }
         });
-
         $("#outPutText").val(outputText);
     }
     /**
