@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>文本序号生成工具高级版</title>
+        <script src="libs/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" href="css/numberPlus.css" />
+        <script src="js/numberPlus.js"></script>
+    </head>
+
+    <body>
+        <h1>文本序号生成工具 Plus</h1>
+
+        <div class="container">
+            <!-- 顶部并排的两个 textarea -->
+            <div class="content-area">
+                <div class="input-output-container">
+                    <div class="input-area">
+                        <h2>输入文本</h2>
+                        <textarea id="inputText" placeholder="请在此输入需要处理的文本，每行一条..."></textarea>
+                    </div>
+                    <div class="output-area">
+                        <h2>输出结果</h2>
+                        <textarea id="outPutText" placeholder="处理后的结果将显示在这里..." readonly></textarea>
+                    </div>
+                </div>
+
+                <!-- 下方左右布局：左侧是设置和按钮，右侧是字符显示 -->
+                <div class="bottom-container">
+                    <!-- 右侧字符显示区域 -->
+                    <div class="conversion-display-area">
+                        <h2>字符拆分显示</h2>
+                        <div class="conversion-area" onselectstart="return false">
+                            <ol id="list"></ol>
+                        </div>
+                    </div>
+
+                    <!-- 左侧设置区域 -->
+                    <div class="settings-area">
+                        <div class="level-settings">
+                            <h2>序号级别</h2>
+                            <div id="settings">
+                                <div class="first-level level">
+                                    <input type="radio" name="level" value="1" checked /><span>一级标签 1.</span>
+                                </div>
+                                <div class="second-level level">
+                                    <input type="radio" name="level" value="2" /><span>二级标签 1.1.</span>
+                                </div>
+                                <div class="third-level level">
+                                    <input type="radio" name="level" value="3" /><span>三级标签 1.1.1.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="operation-buttons">
+                            <h2>操作按钮</h2>
+                            <button id="btn_startConversion">拆分输入文本</button>
+                            <button id="btn_clearString">清空字符块</button>
+                            <button id="btn_number">开始编号</button>
+                            <button id="btn_copy">复制结果</button>
+                            <button id="btn_clearBlock">清空方块颜色</button>
+                            <button id="btn_clear">清除</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
