@@ -83,7 +83,8 @@ textarea {
 }
 
 #operation-buttons h2 {
-    width: 100%; /* 确保标题占满整行 */
+    width: 100%;
+    /* 确保标题占满整行 */
     margin-bottom: 10px;
 }
 
@@ -192,6 +193,12 @@ button:nth-child(6) {
     font-weight: bold;
 }
 
+.order {
+    font-size: 40px;
+    font-weight: bold;
+    color: #51de6f;
+}
+
 /* 右侧字符显示区域 */
 .conversion-display-area {
     flex: 1;
@@ -239,7 +246,7 @@ ol li {
 }
 
 .small-div {
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(225, 207, 207);
     margin: 0px 2px 2px 0px;
     background-color: rgb(255, 255, 255);
     font-size: 30px;
@@ -299,4 +306,31 @@ ol li {
         font-size: 24px;
         min-width: 25px;
     }
+}
+
+.nav-tag {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    padding: 7px 7px;
+    background: #878887;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(255, 102, 102, 0.3);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-tag:hover {
+    background: #51de6f;
+    transform: translateY(-2px);
+}
+
+.tag-text {
+    margin-left: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }

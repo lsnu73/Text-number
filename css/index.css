@@ -89,6 +89,8 @@ button {
 }
 
 
+
+
 button:nth-child(2) {
     background-color: #38a169;
 }
@@ -106,26 +108,27 @@ button:nth-child(4) {
     body {
         padding: 10px 20px;
     }
-    
+
     .container {
         flex-direction: column;
     }
-    
+
     .content-area {
         margin-right: 0;
         margin-bottom: 20px;
     }
-    
+
     .settings-area {
         width: 100%;
-        order: 2; /* 将设置区域移到下方 */
+        order: 2;
+        /* 将设置区域移到下方 */
     }
-    
+
     .input-area,
     .output-area {
         margin-bottom: 15px;
     }
-    
+
     textarea {
         min-height: 120px;
     }
@@ -135,18 +138,57 @@ button:nth-child(4) {
     body {
         padding: 10px;
     }
-    
+
     .container {
         padding: 15px;
     }
-    
+
     .settings,
     .operation-buttons {
         padding: 12px;
     }
-    
+
     h1 {
         font-size: 24px;
         margin-bottom: 20px;
+    }
+
+
+}
+
+.nav-tag {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    padding: 7px 7px;
+    background: #68df68;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(255, 102, 102, 0.3);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-tag:hover {
+    background: #FF4444;
+    transform: translateY(-2px);
+}
+
+.tag-text {
+    margin-left: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .nav-tag {
+        padding: 6px 12px;
+    }
+
+    .tag-text {
+        font-size: 12px;
     }
 }
