@@ -1,7 +1,10 @@
 $(document).ready(function () {
+    // 按钮点击事件
     $("#btn_start").click(startNumber);
     $("#btn_clear").click(clear);
     $("#btn_copy").click(copy);
+    $("#btn_clearNumber").click(clearNumber);
+
     /**
      * 根据用户选项选择，执行对应的编号方法
      */
@@ -12,7 +15,30 @@ $(document).ready(function () {
             positionAfterNumber($("#position").val());
         }
     }
+    /**
+     * 清空文本
+     */
+    function clear() {
+        $("#outPutText").val("");
+        $("#inputText").val("");
+    }
+    /**
+     * 复制输出结果
+     */
+    function copy() {
+        $("#outPutText").select();
+        document.execCommand('copy');
+    }
+    /**
+     * 清空输入内容的数字编号
+     */
+    function clearNumber() {
+        let inputText = $("#inputText").val();
+        let reg = /(\d{1,2}\.){1,3}(?!\d)\s+/g;
+        inputText = inputText.replace(reg, '');
+        $("#outPutText").val(inputText);
 
+    }
     /**
      * 将输入框中的文本转换成列表
      * @returns 包含文本的列表
@@ -61,20 +87,8 @@ $(document).ready(function () {
         })
         $("#outPutText").val(outputText);
     }
-    /**
-     * 清空文本
-     */
-    function clear() {
-        $("#outPutText").val("");
-        $("#inputText").val("");
-    }
-    /**
-     * 复制文本
-     */
-    function copy() {
-        $("#outPutText").select();
-        document.execCommand('copy');
-    }
+
+
 
     $("#optionSelect").change(function () {
         let selectedValue = $(this).val();

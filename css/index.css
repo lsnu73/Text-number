@@ -91,16 +91,20 @@ button {
 
 
 
-button:nth-child(2) {
+#btn_start {
     background-color: #38a169;
 }
 
-button:nth-child(3) {
+#btn_copy {
     background-color: #ed8936;
 }
 
-button:nth-child(4) {
+#btn_clear {
     background-color: #2e75cc;
+}
+
+#btn_clearNumber {
+    background-color: #70839b;
 }
 
 /* 响应式设计 - 移动设备适配 */

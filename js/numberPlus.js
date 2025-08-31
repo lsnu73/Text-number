@@ -26,7 +26,7 @@ $(function () {
         textList.forEach(function (element, value) {
             $("#list").append(`<li id="list${value}"></li>`)
             let characters = Array.from(element);
-            $(`#list${value}`).append(`<span class="order">${value + 1}.&nbsp</span>`)
+            $(`#list${value}`).append(`<span class="order">${value + 1}&emsp;</span>`)
             for (let i = 0; i < characters.length; i++) {
                 $(`#list${value}`).append(`<span id="${index++}" class="small-div" click="div_click">${characters[i]}</span>`);
             }
