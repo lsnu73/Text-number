@@ -83,6 +83,5 @@ $(document).ready(function () {
         $(".settings").children("input").hide();
         // 显示所选输入框
         $("#" + selectedValue).show();
-
     });
 })

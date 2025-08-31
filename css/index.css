@@ -156,31 +156,42 @@ button:nth-child(4) {
 
 }
 
-.nav-tag {
-    position: absolute;
-    right: 20px;
-    top: 50px;
-    display: flex;
-    align-items: center;
-    padding: 7px 7px;
-    background: #68df68;
+.plus-container {
+    float: right;
+    position: relative;
+    right: 0px;
+    top: 30px;
+    border: 2px solid #4CAF50;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(255, 102, 102, 0.3);
-    text-decoration: none;
+    padding: 4px 8px;
+    background: linear-gradient(145deg, #f8fff9, #e0ffe3);
+    box-shadow: 0 4px 6px rgba(76, 175, 80, 0.1);
     transition: all 0.3s ease;
 }
 
-.nav-tag:hover {
-    background: #FF4444;
-    transform: translateY(-2px);
+.plus-container:hover {
+    box-shadow: 0 6px 12px rgba(76, 175, 80, 0.2);
+    transform: translateY(-5px);
 }
 
-.tag-text {
-    margin-left: 8px;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+.plus-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    opacity: 0.8;
+    border-top-left-radius: 6px;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+.plus-text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #2E7D32;
+    font-family: 'Segoe UI', system-ui;
+    text-decoration: none;
+    letter-spacing: 0.7px;
 }
 
 @media (max-width: 768px) {
